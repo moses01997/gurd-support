@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="GURD Privacy Policy">
+  <title>GURD | Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #080B12;
+      --card: #121824;
+      --gold: #D5AD66;
+      --text: #F6F7FA;
+      --muted: #A4ACBA;
+      --border: #283244;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.9;
+    }
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+    select {
+      padding: 9px 12px;
+      background: var(--card);
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 55px 20px 85px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      margin: 10px 0;
+    }
+    h2 {
+      color: var(--gold);
+      font-size: 20px;
+      margin: 0 0 10px;
+    }
+    p, li { color: var(--muted); }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 18px;
+    }
+    .intro {
+      max-width: 720px;
+      margin: auto;
+    }
+    .back {
+      display: inline-block;
+      background: var(--gold);
+      color: #080B12;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      margin-top: 25px;
+    }
+    .center { text-align: center; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    a { color: var(--gold); }
+    @media (max-width: 600px) {
+      .section { padding: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">GURD</a>
+    <select id="language" aria-label="Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="title">سياسة الخصوصية</h1>
+      <p class="intro" id="intro"></p>
+      <p id="updated"></p>
+    </section>
+
+    <div id="sections"></div>
+
+    <div class="center">
+      <a class="back" href="index.html" id="back">
+        العودة للرئيسية
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    ©️ <span id="year"></span> GURD.
+    <span id="rights">جميع الحقوق محفوظة.</span>
+  </footer>
+
+  <script>
+    const updatedDate = "2026-10-24";
+
+    const translations = {
+      ar: {
+        title: "سياسة الخصوصية",
+        intro: "توضح هذه السياسة كيفية جمع واستخدام وحماية البيانات الشخصية عند استخدام تطبيق GURD.",
+        updated: "آخر تحديث: " + updatedDate,
+        back: "العودة للرئيسية",
+        rights: "جميع الحقوق محفوظة.",
+        sections: [
+          ["1. مقدمة",
+           "GURD منصة رقمية تربط العملاء والشركات بالحراس الأمنيين. نحترم خصوصية المستخدمين ونسعى إلى معالجة البيانات بالقدر اللازم لتقديم خدمات التطبيق."],
+          ["2. البيانات التي نجمعها",
+           "قد تشمل البيانات: الاسم، البريد الإلكتروني، رقم الهاتف، المدينة، نوع الحساب، الصورة الشخصية، الخبرات المهنية، اللغات، الشهادات، بيانات التوفر، ومعلومات طلبات الحجز. بالنسبة للحراس، قد تشمل بيانات التحقق صورة الهوية ورقمها وتاريخ الميلاد. وقد تُجمع بيانات تقنية ضرورية لتشغيل الخدمة وأمانها."],
+          ["3. استخدام البيانات",
+           "نستخدم البيانات لإنشاء الحسابات، إدارة الملفات الشخصية، معالجة طلبات الحجز، مراجعة طلبات انضمام الحراس، دعم المستخدمين، تحسين الخدمة، ومنع إساءة الاستخدام."],
+          ["4. التحقق من الحراس",
+           "قد يُطلب من الحارس تقديم مستندات تحقق لمراجعة طلب انضمامه. يجب أن تكون مستندات الهوية متاحة فقط للأشخاص المخولين بالمراجعة، ولا تُعرض ضمن الملفات العامة للحراس."],
+          ["5. مشاركة البيانات",
+           "قد نعرض المعلومات المهنية اللازمة لإتمام الحجوزات، مثل اسم الحارس وخبراته ومدينته وتوفره. وقد نشارك بيانات محدودة مع مزودي الخدمات التقنية اللازمين لتشغيل التطبيق، أو مع الجهات المختصة عندما يقتضي القانون ذلك. لا نبيع البيانات الشخصية للمعلنين."],
+          ["6. تخزين البيانات وحمايتها",
+           "نستخدم خدمات بنية تحتية سحابية، ومنها Supabase، لتشغيل التطبيق وتخزين بياناته. ونسعى إلى استخدام ضوابط الوصول والتشفير أثناء نقل البيانات وإجراءات أمنية مناسبة. لا يمكن ضمان أمان أي نظام بنسبة 100%."],
+          ["7. الموقع الجغرافي",
+           "قد يستخدم التطبيق المدينة التي يحددها المستخدم لعرض الحراس والخدمات المناسبة. وإذا أُضيفت مستقبلاً ميزة تحديد الموقع الدقيق، فسيتم توضيح الغرض منها وطلب الأذونات اللازمة."],
+          ["8. الإشعارات",
+           "قد نرسل إشعارات متعلقة بالحجوزات وحالة طلبات الحراس والتحديثات المهمة، بحسب الخصائص المتاحة وإعدادات الجهاز."],
+          ["9. الاحتفاظ بالبيانات",
+           "نحتفظ بالبيانات للمدة اللازمة لتشغيل الخدمة والوفاء بالالتزامات القانونية وحل النزاعات. وتختلف المدة حسب نوع البيانات. يمكن للمستخدم التواصل معنا للاستفسار عن الاحتفاظ ببياناته أو طلب حذفها، مع مراعاة الالتزامات القانونية."],
+          ["10. حقوق المستخدم",
+           "يمكن للمستخدم طلب الوصول إلى بياناته أو تصحيحها أو حذفها، وفق الأنظمة المعمول بها. ويمكنه أيضًا تعديل بعض بيانات حسابه من داخل التطبيق عندما تكون هذه الخاصية متاحة."],
+          ["11. حذف الحساب",
+           "يمكن طلب حذف الحساب والبيانات المرتبطة به عبر وسيلة الدعم الرسمية الموضحة في صفحة التواصل. وقد نحتفظ ببيانات محددة إذا كان ذلك مطلوبًا قانونًا. يجب توفير خيار حذف الحساب داخل التطبيق عندما تتطلب سياسات المتجر ذلك."],
+          ["12. خصوصية الأطفال",
+           "التطبيق مخصص للمستخدمين المؤهلين قانونيًا للاستفادة من خدماته، ولا يستهدف الأطفال. يجب أن تتوافق شروط الأهلية العمرية الفعلية مع متطلبات الخدمة والأنظمة المحلية."],
+          ["13. التغييرات على السياسة",
+           "قد نحدّث هذه السياسة عند تغيير الخدمات أو طرق معالجة البيانات، وسننشر النسخة الجديدة على هذه الصفحة مع تحديث التاريخ."],
+          ["14. التواصل معنا",
+           "للاستفسارات المتعلقة بالخصوصية أو طلبات البيانات وحذف الحساب، يُرجى استخدام وسائل التواصل الرسمية الموضحة في صفحة تواصل معنا."]
+        ]
+      },
+
+      en: {
+        title: "Privacy Policy",
+        intro: "This policy explains how GURD collects, uses, and protects personal information when you use our application.",
+        updated: "Last updated: " + updatedDate,
+        back: "Back to Home",
+        rights: "All rights reserved.",
+        sections: [
+          ["1. Introduction",
+           "GURD is a digital platform connecting clients and businesses with security guards. We respect user privacy and aim to process only the information needed to provide our services."],
+          ["2. Information We Collect",
+           "Information may include your name, email address, phone number, city, account type, profile photo, professional experience, languages, certificates, availability, and booking information. For guards, verification data may include an identity document image, ID number, and date of birth. Technical information necessary for service operation and security may also be collected."],
+          ["3. How We Use Information",
+           "We use information to create accounts, manage profiles, process booking requests, review guard applications, support users, improve the service, and prevent misuse."],
+          ["4. Guard Verification",
+           "Guards may be required to provide verification documents for application review. Identity documents should only be accessible to authorized reviewers and are not displayed on public guard profiles."],
+          ["5. Information Sharing",
+           "We may display professional information needed for bookings, such as a guard's name, experience, city, and availability. Limited information may be shared with service providers necessary to operate the app or with authorities where legally required. We do not sell personal information to advertisers."],
+          ["6. Storage and Security",
+           "We use cloud infrastructure services, including Supabase, to operate the app and store information. We aim to implement access controls, encryption in transit, and appropriate security measures. No system can guarantee absolute security."],
+          ["7. Location Information",
+           "The app may use the city selected by a user to display relevant guards and services. If precise location features are introduced in the future, their purpose and required permissions will be explained."],
+          ["8. Notifications",
+           "We may send notifications related to bookings, guard application status, and important service updates, depending on available features and device settings."],
+          ["9. Data Retention",
+           "We retain information as necessary to operate the service, meet legal obligations, and resolve disputes. Retention periods vary by data type. Users may contact us about retention or request deletion, subject to legal requirements."],
+          ["10. Your Rights",
+           "Users may request access to, correction of, or deletion of their personal information in accordance with applicable laws. Some account information may also be editable within the app where supported."],
+          ["11. Account Deletion",
+           "Users may request deletion of their accounts and associated data through the official support contact described on our Contact page. Certain information may be retained where legally required. In-app account deletion must be provided where required by app store policies."],
+          ["12. Children's Privacy",
+           "The service is intended for users legally eligible to use its features and is not directed at children. Actual age eligibility must comply with service requirements and local laws."],
+          ["13. Policy Changes",
+           "We may update this policy when our services or data practices change. The revised version and update date will be published on this page."],
+          ["14. Contact",
+           "For privacy questions, data requests, or account deletion requests, please use the official contact methods listed on our Contact page."]
+        ]
+      },
+
+      fr: {
+        title: "Politique de confidentialité",
+        intro: "Cette politique explique comment GURD collecte, utilise et protège les données personnelles des utilisateurs.",
+        updated: "Dernière mise à jour : " + updatedDate,
+        back: "Retour à l'accueil",
+        rights: "Tous droits réservés.",
+        sections: [
+          ["1. Introduction",
+           "GURD est une plateforme numérique qui met en relation les clients et les entreprises avec des agents de sécurité. Nous respectons la vie privée des utilisateurs et limitons le traitement des données aux besoins du service."],
+          ["2. Données collectées",
+           "Les données peuvent comprendre le nom, l'adresse e-mail, le numéro de téléphone, la ville, le type de compte, la photo de profil, l'expérience professionnelle, les langues, les certificats, les disponibilités et les réservations. Pour les agents, les données de vérification peuvent comprendre une photo de pièce d'identité, son numéro et la date de naissance. Des données techniques nécessaires au fonctionnement et à la sécurité peuvent également être collectées."],
+          ["3. Utilisation des données",
+           "Les données servent à créer les comptes, gérer les profils, traiter les réservations, examiner les candidatures des agents, assister les utilisateurs, améliorer le service et prévenir les abus."],
+          ["4. Vérification des agents",
+           "Les agents peuvent devoir fournir des documents pour la vérification de leur candidature. Ces documents doivent être accessibles uniquement aux personnes autorisées et ne sont pas affichés sur les profils publics."],
+          ["5. Partage des données",
+           "Certaines informations professionnelles, comme le nom, l'expérience, la ville et la disponibilité, peuvent être visibles pour faciliter les réservations. Des données limitées peuvent être partagées avec les prestataires techniques nécessaires ou les autorités lorsque la loi l'exige. Nous ne vendons pas de données personnelles aux annonceurs."],
+          ["6. Stockage et sécurité",
+           "Nous utilisons des services cloud, notamment Supabase, pour faire fonctionner l'application et stocker les données. Nous cherchons à appliquer des contrôles d'accès, le chiffrement en transit et des mesures de sécurité appropriées. Aucun système ne peut garantir une sécurité absolue."],
+          ["7. Localisation",
+           "L'application peut utiliser la ville choisie par l'utilisateur pour afficher des services pertinents. Si des fonctions de localisation précise sont ajoutées, leur finalité et les autorisations nécessaires seront expliquées."],
+          ["8. Notifications",
+           "Des notifications peuvent être envoyées pour les réservations, le statut des candidatures et les mises à jour importantes, selon les fonctionnalités disponibles et les paramètres de l'appareil."],
+          ["9. Conservation des données",
+           "Les données sont conservées pendant la durée nécessaire au fonctionnement du service, au respect des obligations légales et à la résolution des litiges. Les durées varient selon les catégories de données. Les utilisateurs peuvent demander des informations ou la suppression de leurs données, sous réserve des obligations légales."],
+          ["10. Vos droits",
+           "Les utilisateurs peuvent demander l'accès, la rectification ou la suppression de leurs données personnelles conformément aux lois applicables. Certaines informations peuvent être modifiées directement dans l'application lorsque cette fonction est disponible."],
+          ["11. Suppression du compte",
+           "La suppression du compte et des données associées peut être demandée via les coordonnées officielles de la page Contact. Certaines données peuvent être conservées si la loi l'exige. Une fonction de suppression dans l'application doit être proposée lorsque les règles des boutiques l'imposent."],
+          ["12. Protection des enfants",
+           "Le service est destiné aux personnes légalement autorisées à utiliser ses fonctionnalités et ne cible pas les enfants. Les conditions d'âge doivent respecter les exigences du service et les lois locales."],
+          ["13. Modifications",
+           "Cette politique peut être mise à jour en cas de changement des services ou des pratiques de traitement des données. La nouvelle version et sa date seront publiées sur cette page."],
+          ["14. Contact",
+           "Pour toute question relative à la confidentialité, aux données ou à la suppression du compte, utilisez les coordonnées officielles figurant sur la page Contact."]
+        ]
+      }
+    };
+
+    const languageSelect =
+      document.getElementById("language");
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.ar;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir =
+        lang === "ar" ? "rtl" : "ltr";
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("intro").textContent = t.intro;
+      document.getElementById("updated").textContent = t.updated;
+      document.getElementById("back").textContent = t.back;
+      document.getElementById("rights").textContent = t.rights;
+
+      const container = document.getElementById("sections");
+      container.replaceChildren();
+
+      t.sections.forEach(([heading, content]) => {
+        const section = document.createElement("section");
+        section.className = "section";
+
+        const h2 = document.createElement("h2");
+        h2.textContent = heading;
+
+        const p = document.createElement("p");
+        p.textContent = content;
+
+        section.append(h2, p);
+        container.appendChild(section);
+      });
+
+      languageSelect.value = lang;
+      localStorage.setItem("gurd-language", lang);
+    }
+
+    languageSelect.addEventListener("change", e => {
+      setLanguage(e.target.value);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    setLanguage(
+      localStorage.getItem("gurd-language") || "ar"
+    );
+  </script>
+</body>
+</html>
