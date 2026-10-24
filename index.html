@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="GURD official support center">
+  <title>GURD | مركز الدعم</title>
+  <style>
+    :root {
+      --bg: #080B12;
+      --card: #121824;
+      --gold: #D5AD66;
+      --text: #F6F7FA;
+      --muted: #A4ACBA;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+    header {
+      padding: 22px 7%;
+      border-bottom: 1px solid #263040;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: var(--gold);
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+    select {
+      background: var(--card);
+      color: white;
+      border: 1px solid #394252;
+      border-radius: 9px;
+      padding: 9px;
+    }
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+    .hero { text-align: center; }
+    h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      margin-bottom: 12px;
+    }
+    .gold { color: var(--gold); }
+    p { color: var(--muted); }
+    .intro {
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 45px;
+    }
+    .card {
+      display: block;
+      background: var(--card);
+      border: 1px solid #283244;
+      border-radius: 18px;
+      padding: 27px;
+      text-decoration: none;
+      color: var(--text);
+      transition: .2s;
+    }
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .symbol { font-size: 30px; }
+    .card h2 {
+      font-size: 20px;
+      margin: 14px 0 7px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      border-top: 1px solid #263040;
+      padding: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GURD</div>
+    <select id="language" aria-label="Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="heading">مرحبًا بك في <span class="gold">GURD</span></h1>
+      <p class="intro" id="intro">
+        مركز الدعم الرسمي لتطبيق قارد.
+        تعرف على خدماتنا، واطلع على سياسة الخصوصية،
+        واحصل على المساعدة التي تحتاجها.
+      </p>
+    </section>
+
+    <section class="grid">
+      <a class="card" href="about.html">
+        <div class="symbol">🛡️</div>
+        <h2 id="aboutTitle">عن قارد</h2>
+        <p id="aboutDesc">تعرف على التطبيق وخدماته.</p>
+      </a>
+
+      <a class="card" href="privacy.html">
+        <div class="symbol">🔒</div>
+        <h2 id="privacyTitle">سياسة الخصوصية</h2>
+        <p id="privacyDesc">
+          تعرف على كيفية التعامل مع بياناتك.
+        </p>
+      </a>
+
+      <a class="card" href="contact.html">
+        <div class="symbol">✉️</div>
+        <h2 id="contactTitle">تواصل معنا</h2>
+        <p id="contactDesc">
+          نحن هنا للإجابة عن استفساراتك.
+        </p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    ©️ <span id="year"></span> GURD.
+    <span id="rights">جميع الحقوق محفوظة.</span>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        heading: 'مرحبًا بك في <span class="gold">GURD</span>',
+        intro: 'مركز الدعم الرسمي لتطبيق قارد. تعرف على خدماتنا، واطلع على سياسة الخصوصية، واحصل على المساعدة التي تحتاجها.',
+        aboutTitle: 'عن قارد',
+        aboutDesc: 'تعرف على التطبيق وخدماته.',
+        privacyTitle: 'سياسة الخصوصية',
+        privacyDesc: 'تعرف على كيفية التعامل مع بياناتك.',
+        contactTitle: 'تواصل معنا',
+        contactDesc: 'نحن هنا للإجابة عن استفساراتك.',
+        rights: 'جميع الحقوق محفوظة.'
+      },
+      en: {
+        heading: 'Welcome to <span class="gold">GURD</span>',
+        intro: 'The official GURD support center. Explore our services, read our privacy policy, and get the help you need.',
+        aboutTitle: 'About GURD',
+        aboutDesc: 'Learn about our app and services.',
+        privacyTitle: 'Privacy Policy',
+        privacyDesc: 'Learn how we handle your data.',
+        contactTitle: 'Contact Us',
+        contactDesc: 'We are here to answer your questions.',
+        rights: 'All rights reserved.'
+      },
+      fr: {
+        heading: 'Bienvenue sur <span class="gold">GURD</span>',
+        intro: "Le centre d'assistance officiel de GURD. Découvrez nos services, consultez notre politique de confidentialité et obtenez de l'aide.",
+        aboutTitle: 'À propos de GURD',
+        aboutDesc: "Découvrez notre application et nos services.",
+        privacyTitle: 'Confidentialité',
+        privacyDesc: 'Découvrez comment nous traitons vos données.',
+        contactTitle: 'Contactez-nous',
+        contactDesc: 'Nous sommes là pour répondre à vos questions.',
+        rights: 'Tous droits réservés.'
+      }
+    };
+
+    const language = document.getElementById('language');
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.ar;
+      document.documentElement.lang = lang;
+      document.documentElement.dir =
+        lang === 'ar' ? 'rtl' : 'ltr';
+
+      Object.keys(t).forEach(key => {
+        const el = document.getElementById(key);
+        if (!el) return;
+        if (key === 'heading') {
+          el.innerHTML = t[key];
+        } else {
+          el.textContent = t[key];
+        }
+      });
+    }
+
+    language.addEventListener('change', e => {
+      setLanguage(e.target.value);
+    });
+
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+    setLanguage('ar');
+  </script>
+</body>
+</html>
