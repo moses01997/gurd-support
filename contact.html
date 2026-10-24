@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="Contact GURD official support">
+  <title>GURD | Contact Us</title>
+
+  <style>
+    :root {
+      --bg: #080B12;
+      --card: #121824;
+      --gold: #D5AD66;
+      --text: #F6F7FA;
+      --muted: #A4ACBA;
+      --border: #283244;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+
+    select {
+      background: var(--card);
+      color: white;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 65px 20px 90px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      margin: 12px 0;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 23px;
+      margin: 10px 0;
+      color: var(--gold);
+    }
+
+    .email {
+      display: block;
+      direction: ltr;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      margin: 20px 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 11px;
+      background: var(--gold);
+      color: #080B12;
+      font-weight: 800;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .info {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-top: 20px;
+    }
+
+    .info h3 {
+      color: var(--gold);
+      margin: 0 0 10px;
+    }
+
+    .info p {
+      margin: 0;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 25px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 25px 18px; }
+      main { padding-top: 45px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">GURD</a>
+
+    <select id="language" aria-label="Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">GURD SUPPORT</div>
+      <h1 id="title">تواصل معنا</h1>
+      <p id="intro">
+        هل لديك سؤال أو تحتاج إلى مساعدة؟
+        تواصل مع فريق دعم قارد.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="icon">✉️</div>
+
+      <h2 id="emailTitle">البريد الإلكتروني</h2>
+
+      <p id="emailDesc">
+        للاستفسارات والمساعدة والملاحظات
+      </p>
+
+      <a class="email" href="mailto:App.gurd@gmail.com">
+        App.gurd@gmail.com
+      </a>
+
+      <a
+        id="sendButton"
+        class="button"
+        href="mailto:App.gurd@gmail.com"
+      >
+        إرسال بريد إلكتروني
+      </a>
+    </section>
+
+    <section class="info">
+      <h3 id="accountTitle">حذف الحساب والبيانات</h3>
+      <p id="accountDesc">
+        لطلب حذف حسابك، راسلنا من البريد
+        المرتبط بحسابك، واذكر أنك ترغب
+        في حذف حساب GURD.
+      </p>
+      <div style="margin-top: 18px;">
+        <a
+          class="button secondary"
+          id="deleteButton"
+          href="mailto:App.gurd@gmail.com?subject=GURD%20Account%20Deletion%20Request"
+        >
+          طلب حذف الحساب
+        </a>
+      </div>
+    </section>
+
+    <section class="info">
+      <h3 id="privacyTitle">الخصوصية وحماية البيانات</h3>
+      <p id="privacyDesc">
+        إذا كان لديك استفسار حول بياناتك
+        الشخصية أو طريقة استخدامها،
+        يمكنك التواصل معنا عبر البريد
+        الإلكتروني أو قراءة سياسة الخصوصية.
+      </p>
+      <div style="margin-top: 15px;">
+        <a href="privacy.html" id="privacyLink"
+           style="color: var(--gold);">
+          عرض سياسة الخصوصية
+        </a>
+      </div>
+    </section>
+
+    <div class="center">
+      <a href="index.html" class="button" id="back">
+        العودة للرئيسية
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    ©️ <span id="year"></span> GURD.
+    <span id="rights">جميع الحقوق محفوظة.</span>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        title: "تواصل معنا",
+        intro: "هل لديك سؤال أو تحتاج إلى مساعدة؟ تواصل مع فريق دعم قارد.",
+        emailTitle: "البريد الإلكتروني",
+        emailDesc: "للاستفسارات والمساعدة والملاحظات",
+        sendButton: "إرسال بريد إلكتروني",
+        accountTitle: "حذف الحساب والبيانات",
+        accountDesc: "لطلب حذف حسابك، راسلنا من البريد المرتبط بحسابك، واذكر أنك ترغب في حذف حساب GURD.",
+        deleteButton: "طلب حذف الحساب",
+        privacyTitle: "الخصوصية وحماية البيانات",
+        privacyDesc: "إذا كان لديك استفسار حول بياناتك الشخصية أو طريقة استخدامها، يمكنك التواصل معنا عبر البريد الإلكتروني أو قراءة سياسة الخصوصية.",
+        privacyLink: "عرض سياسة الخصوصية",
+        back: "العودة للرئيسية",
+        rights: "جميع الحقوق محفوظة."
+      },
+
+      en: {
+        title: "Contact Us",
+        intro: "Have a question or need assistance? Contact the GURD support team.",
+        emailTitle: "Email Support",
+        emailDesc: "For questions, assistance, and feedback",
+        sendButton: "Send an Email",
+        accountTitle: "Account and Data Deletion",
+        accountDesc: "To request account deletion, email us from the address associated with your account and state that you wish to delete your GURD account.",
+        deleteButton: "Request Account Deletion",
+        privacyTitle: "Privacy and Data Protection",
+        privacyDesc: "If you have questions about your personal information or how it is used, contact us by email or read our privacy policy.",
+        privacyLink: "View Privacy Policy",
+        back: "Back to Home",
+        rights: "All rights reserved."
+      },
+
+      fr: {
+        title: "Contactez-nous",
+        intro: "Vous avez une question ou besoin d'aide ? Contactez l'équipe d'assistance GURD.",
+        emailTitle: "Assistance par e-mail",
+        emailDesc: "Pour les questions, l'assistance et les commentaires",
+        sendButton: "Envoyer un e-mail",
+        accountTitle: "Suppression du compte et des données",
+        accountDesc: "Pour demander la suppression de votre compte, envoyez un e-mail depuis l'adresse associée à votre compte GURD en précisant votre demande.",
+        deleteButton: "Demander la suppression",
+        privacyTitle: "Confidentialité et protection des données",
+        privacyDesc: "Pour toute question concernant vos données personnelles ou leur utilisation, contactez-nous par e-mail ou consultez notre politique de confidentialité.",
+        privacyLink: "Voir la politique de confidentialité",
+        back: "Retour à l'accueil",
+        rights: "Tous droits réservés."
+      }
+    };
+
+    const languageSelect =
+      document.getElementById("language");
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.ar;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir =
+        lang === "ar" ? "rtl" : "ltr";
+
+      Object.keys(t).forEach(key => {
+        const el = document.getElementById(key);
+        if (el) el.textContent = t[key];
+      });
+
+      languageSelect.value = lang;
+      localStorage.setItem("gurd-language", lang);
+    }
+
+    languageSelect.addEventListener("change", e => {
+      setLanguage(e.target.value);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    setLanguage(
+      localStorage.getItem("gurd-language") || "ar"
+    );
+  </script>
+</body>
+</html>
