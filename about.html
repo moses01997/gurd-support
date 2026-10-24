@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="Learn about GURD, a platform connecting clients and companies with security guards.">
+  <title>GURD | About</title>
+
+  <style>
+    :root {
+      --bg: #080B12;
+      --card: #121824;
+      --gold: #D5AD66;
+      --text: #F6F7FA;
+      --muted: #A4ACBA;
+      --border: #283244;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.9;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+
+    select {
+      padding: 9px 12px;
+      background: var(--card);
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 65px 20px 90px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      margin: 12px 0;
+      line-height: 1.4;
+    }
+
+    h2 {
+      font-size: 23px;
+      color: var(--gold);
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 10px 0;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 15px auto;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin: 35px 0;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin: 5px 0;
+    }
+
+    .section {
+      margin-top: 35px;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 25px;
+      background: var(--gold);
+      color: #080B12;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 11px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding-top: 45px;
+      }
+
+      .section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">GURD</a>
+
+    <select id="language" aria-label="Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">GURD PLATFORM</div>
+
+      <h1 id="title">عن قارد</h1>
+
+      <p class="intro" id="intro">
+        قارد منصة رقمية تهدف إلى تسهيل التواصل
+        بين الأفراد والشركات والحراس الأمنيين،
+        وتنظيم طلبات خدمات الحراسة بطريقة
+        سهلة وواضحة.
+      </p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3 id="clientsTitle">للأفراد</h3>
+        <p id="clientsDesc">
+          استعراض ملفات الحراس المتاحين
+          وإرسال طلبات الحجز وفق الاحتياج.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3 id="companiesTitle">للشركات</h3>
+        <p id="companiesDesc">
+          تسهيل الوصول إلى خدمات الحراسة
+          وتنظيم الطلبات المرتبطة بها.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👮</div>
+        <h3 id="guardsTitle">للحراس</h3>
+        <p id="guardsDesc">
+          إنشاء ملف مهني، وإضافة الخبرات
+          والمهارات، وتحديد التوفر،
+          واستقبال طلبات الحجز.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2 id="missionTitle">رسالتنا</h2>
+      <p id="missionDesc">
+        نعمل على تطوير تجربة رقمية تسهل
+        الوصول إلى خدمات الحراسة، وتساعد
+        على تنظيم التواصل والطلبات بين
+        الأطراف المختلفة.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 id="howTitle">كيف يعمل قارد؟</h2>
+      <p id="howDesc">
+        يستطيع العميل استعراض ملفات الحراس
+        وإرسال طلب حجز. ويمكن للحارس
+        إدارة ملفه وتوفره والتعامل مع
+        الطلبات وفق خصائص التطبيق.
+        وتخضع طلبات انضمام الحراس
+        لعملية مراجعة قبل ظهور ملفاتهم.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 id="visionTitle">رؤيتنا</h2>
+      <p id="visionDesc">
+        أن يصبح قارد منصة موثوقة وسهلة
+        الاستخدام تربط بين احتياجات
+        العملاء والفرص المهنية للحراس
+        الأمنيين، مع الاهتمام بالشفافية
+        وتجربة المستخدم.
+      </p>
+    </section>
+
+    <div class="center">
+      <a href="index.html" class="back" id="back">
+        العودة للرئيسية
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    ©️ <span id="year"></span> GURD.
+    <span id="rights">جميع الحقوق محفوظة.</span>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        title: "عن قارد",
+        intro: "قارد منصة رقمية تهدف إلى تسهيل التواصل بين الأفراد والشركات والحراس الأمنيين، وتنظيم طلبات خدمات الحراسة بطريقة سهلة وواضحة.",
+        clientsTitle: "للأفراد",
+        clientsDesc: "استعراض ملفات الحراس المتاحين وإرسال طلبات الحجز وفق الاحتياج.",
+        companiesTitle: "للشركات",
+        companiesDesc: "تسهيل الوصول إلى خدمات الحراسة وتنظيم الطلبات المرتبطة بها.",
+        guardsTitle: "للحراس",
+        guardsDesc: "إنشاء ملف مهني، وإضافة الخبرات والمهارات، وتحديد التوفر، واستقبال طلبات الحجز.",
+        missionTitle: "رسالتنا",
+        missionDesc: "نعمل على تطوير تجربة رقمية تسهل الوصول إلى خدمات الحراسة، وتساعد على تنظيم التواصل والطلبات بين الأطراف المختلفة.",
+        howTitle: "كيف يعمل قارد؟",
+        howDesc: "يستطيع العميل استعراض ملفات الحراس وإرسال طلب حجز. ويمكن للحارس إدارة ملفه وتوفره والتعامل مع الطلبات وفق خصائص التطبيق. وتخضع طلبات انضمام الحراس لعملية مراجعة قبل ظهور ملفاتهم.",
+        visionTitle: "رؤيتنا",
+        visionDesc: "أن يصبح قارد منصة موثوقة وسهلة الاستخدام تربط بين احتياجات العملاء والفرص المهنية للحراس الأمنيين، مع الاهتمام بالشفافية وتجربة المستخدم.",
+        back: "العودة للرئيسية",
+        rights: "جميع الحقوق محفوظة."
+      },
+
+      en: {
+        title: "About GURD",
+        intro: "GURD is a digital platform designed to connect individuals and businesses with security guards and simplify security service booking requests.",
+        clientsTitle: "For Individuals",
+        clientsDesc: "Explore available guard profiles and submit booking requests based on your needs.",
+        companiesTitle: "For Businesses",
+        companiesDesc: "Find security services and organize related booking requests.",
+        guardsTitle: "For Guards",
+        guardsDesc: "Create a professional profile, add experience and skills, manage availability, and receive booking requests.",
+        missionTitle: "Our Mission",
+        missionDesc: "We aim to simplify access to security services and improve communication and booking management between participants.",
+        howTitle: "How GURD Works",
+        howDesc: "Clients can browse guard profiles and submit booking requests. Guards can manage their profiles, availability, and incoming requests. Guard applications undergo review before their profiles become visible.",
+        visionTitle: "Our Vision",
+        visionDesc: "To build a trusted and accessible platform connecting client needs with professional opportunities for security guards, with a focus on transparency and user experience.",
+        back: "Back to Home",
+        rights: "All rights reserved."
+      },
+
+      fr: {
+        title: "À propos de GURD",
+        intro: "GURD est une plateforme numérique conçue pour mettre en relation les particuliers et les entreprises avec des agents de sécurité et simplifier les demandes de réservation.",
+        clientsTitle: "Pour les particuliers",
+        clientsDesc: "Consultez les profils des agents disponibles et envoyez des demandes de réservation selon vos besoins.",
+        companiesTitle: "Pour les entreprises",
+        companiesDesc: "Accédez aux services de sécurité et organisez les demandes de réservation.",
+        guardsTitle: "Pour les agents",
+        guardsDesc: "Créez un profil professionnel, ajoutez vos expériences et compétences, gérez vos disponibilités et recevez des demandes.",
+        missionTitle: "Notre mission",
+        missionDesc: "Nous souhaitons simplifier l'accès aux services de sécurité et améliorer la communication et la gestion des réservations.",
+        howTitle: "Comment fonctionne GURD ?",
+        howDesc: "Les clients peuvent consulter les profils et envoyer des demandes de réservation. Les agents peuvent gérer leurs profils, leurs disponibilités et les demandes reçues. Les candidatures des agents sont examinées avant la publication de leurs profils.",
+        visionTitle: "Notre vision",
+        visionDesc: "Construire une plateforme fiable et accessible reliant les besoins des clients aux opportunités professionnelles des agents de sécurité, en privilégiant la transparence et l'expérience utilisateur.",
+        back: "Retour à l'accueil",
+        rights: "Tous droits réservés."
+      }
+    };
+
+    const languageSelect =
+      document.getElementById("language");
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.ar;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir =
+        lang === "ar" ? "rtl" : "ltr";
+
+      for (const key of Object.keys(t)) {
+        const element = document.getElementById(key);
+
+        if (element) {
+          element.textContent = t[key];
+        }
+      }
+
+      languageSelect.value = lang;
+      localStorage.setItem("gurd-language", lang);
+    }
+
+    languageSelect.addEventListener("change", function(e) {
+      setLanguage(e.target.value);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const savedLanguage =
+      localStorage.getItem("gurd-language") || "ar";
+
+    setLanguage(savedLanguage);
+  </script>
+
+</body>
+</html>
